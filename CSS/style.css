@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*, *:before, *:after {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus, :active {
+   outline: none;
+}
+
+a:focus, a:active {
+   outline: none;
+}
+
+nav, footer, header, aside {
+   display: block;
+}
+
+html, body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a, a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-size: inherit;
+   font-weight: inherit;
+}
+
+/*--------------------*/
+html, body {
+   height: 100%;
+}
+
+body {
+   background-color: black;
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   height: 100%;
+   overflow: hidden;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+}
+
+.wawe-btn {
+   width: 280px;
+   height: 60px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   border-radius: 0 0 10px 10px;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-transition: all 0.8s ease 0s;
+   transition: all 0.8s ease 0s;
+   text-decoration: none;
+   overflow: hidden;
+   position: relative;
+}
+
+.wawe-btn:hover {
+   -webkit-transition: all 0.8s ease 3s;
+   transition: all 0.8s ease 3s;
+   -webkit-box-shadow: 0 0 40px rgba(73, 122, 255, 0.6);
+           box-shadow: 0 0 40px rgba(73, 122, 255, 0.6);
+   border-radius: 10px;
+}
+
+.wawe-btn:hover .wawe-btn__waves {
+   top: -50px;
+}
+
+.wawe-btn__text {
+   color: aliceblue;
+   text-transform: uppercase;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   letter-spacing: 8px;
+   font-family: Arial, Helvetica, sans-serif;
+   position: relative;
+   z-index: 1;
+}
+
+.wawe-btn__waves {
+   position: absolute;
+   width: 260px;
+   height: 280px;
+   background-color: #4973ff;
+   -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+           box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+   top: 0;
+   left: 0;
+   -webkit-transition: all 3s ease 0s;
+   transition: all 3s ease 0s;
+}
+
+.wawe-btn__waves::after,
+.wawe-btn__waves::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   width: 250%;
+   height: 250%;
+   -webkit-transform: translate3d(-56%, -96%, 0) rotate(0deg) scale(1);
+           transform: translate3d(-56%, -96%, 0) rotate(0deg) scale(1);
+}
+
+.wawe-btn__waves::before {
+   background-color: black;
+   border-radius: 48%;
+   -webkit-animation: waves 5s infinite linear;
+           animation: waves 5s infinite linear;
+}
+
+.wawe-btn__waves::after {
+   background-color: rgba(0, 0, 0, 0.5);
+   border-radius: 44%;
+   -webkit-animation: waves 10s infinite linear;
+           animation: waves 10s infinite linear;
+}
+
+@-webkit-keyframes waves {
+   0% {
+      -webkit-transform: translate3d(-56%, -96%, 0) rotate(0deg) scale(1);
+              transform: translate3d(-56%, -96%, 0) rotate(0deg) scale(1);
+   }
+   100% {
+      -webkit-transform: translate3d(-56%, -96%, 0) rotate(360deg) scale(1);
+              transform: translate3d(-56%, -96%, 0) rotate(360deg) scale(1);
+   }
+}
+
+@keyframes waves {
+   0% {
+      -webkit-transform: translate3d(-56%, -96%, 0) rotate(0deg) scale(1);
+              transform: translate3d(-56%, -96%, 0) rotate(0deg) scale(1);
+   }
+   100% {
+      -webkit-transform: translate3d(-56%, -96%, 0) rotate(360deg) scale(1);
+              transform: translate3d(-56%, -96%, 0) rotate(360deg) scale(1);
+   }
+}
